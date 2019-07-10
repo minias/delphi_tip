@@ -4,9 +4,9 @@ Delphi/Pascal Wrapper around the library "libssh2"
      https://bitbucket.org/ZeljkoMarjanovic/libssh2-delphi
      
      Contributors:
-       https://bitbucket.org/jeroenp/libssh2-delphi
-       https://bitbucket.org/VadimLV/libssh2_delphi
-       https://github.com/pult/libssh2_delphi/
+       [jeroenp](https://bitbucket.org/jeroenp/libssh2-delphi)
+       [VadimLV](https://bitbucket.org/VadimLV/libssh2_delphi)
+       [pult](https://github.com/pult/libssh2_delphi/)
        
 ## License
 
