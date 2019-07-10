@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AA8479DF-BD51-4ED2-8761-A5F112183A34}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="demo\SFTP_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SFTP_Demo">
+        <MSBuild Projects="demo\SFTP_Demo.dproj"/>
+    </Target>
+    <Target Name="SFTP_Demo:Clean">
+        <MSBuild Projects="demo\SFTP_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SFTP_Demo:Make">
+        <MSBuild Projects="demo\SFTP_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SFTP_Demo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SFTP_Demo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SFTP_Demo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
